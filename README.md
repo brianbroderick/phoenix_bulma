@@ -10,3 +10,55 @@ To start your Phoenix server:
   * Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+
+## To Reproduce:
+
+1. Remove Bootstrap 
+```
+$ rm assets/css/phoenix.css
+```
+2. Install Bulma and Font Awesome
+```
+$ cd assets
+$ npm install --save bulma font-awesome
+```
+3. Install Sass-Brunch & Copycat-Brunch
+```
+$ npm install --save-dev sass-brunch copycat-brunch
+```
+4. Add sass-brunch, font-awesome, and copycat config to brunch
+```
+// Configure your plugins
+plugins: {
+  babel: {
+    // Do not use ES6 compiler in vendor code
+    ignore: [/vendor/]
+  },
+  copycat: {
+    "fonts": ["node_modules/font-awesome/fonts"]
+  },
+  sass: {
+    options: {
+      includePaths: ["node_modules/bulma", "node_modules/font-awesome/scss"]
+    }
+  }
+},
+```
+And the scss folder to the watch pass.
+```
+paths: {
+    // Dependencies and current project directories to watch
+    watched: ["static", "css", "scss", "js", "vendor"],
+    ...
+  },
+...
+```
+5. Rename app.css to app.scss
+```
+$ cd assets/css; mv app.css app.scss
+```
+6. Import Bulma in app.scss
+```
+@import "bulma"
+```
+
