@@ -61,4 +61,4 @@ $ cd assets/css; mv app.css app.scss
 ```
 @import "bulma"
 ```
-
+7. Start over on your template. It's currently set up with Bootstrap classes.
