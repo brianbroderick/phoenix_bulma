@@ -1,6 +1,6 @@
-# Phoenix 1.3 with Bulma 0.6.2 and Font Awesome 4.7
+# Phoenix 1.3 with Bulma 0.6.2, Font Awesome 4.7, and Vue 2.5.13
 
-This is an example of using Elixir Phoenix with Bulma.  There's a basic Bulma starter template being used. The main changes to the default install is in /assets/package.json, /assets/brunch-config.js, and /assets/css/* (namely that app.css was renamed to app.scss and some custom css was imported).
+This is an example of using Elixir Phoenix with Bulma and Vue. There is also a branch called bulma_without_vue if you don't want Vue. There's a basic Bulma starter template being used for the default Page template.
 
 To start your Phoenix server:
 
@@ -11,7 +11,7 @@ To start your Phoenix server:
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
-## To Reproduce:
+## To Install Bulma and Font Awesome:
 
 1. Remove Bootstrap 
 ```
@@ -62,3 +62,28 @@ $ cd assets/css; mv app.css app.scss
 @import "bulma"
 ```
 7. Start over on your template. It's currently set up with Bootstrap classes.
+
+## To install Vue
+1. Install Vue
+```
+cd assets
+npm install vue
+```
+2. In /assets/brunch-config.js, add a Vue alias so it knows which JS file to use.
+```
+npm: {
+    enabled: true,
+    aliases: {
+      vue: "vue/dist/vue.common.js"
+    }
+  }
+```
+3. Import Vue in /assets/js/app.js
+```
+import Vue from 'vue'
+```
+Note: If you want Vue code in a file other than app.js (for example, a file called main.js), you'll import main in app.js like this:
+```
+import "./main"
+```
+
