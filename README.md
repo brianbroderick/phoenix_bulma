@@ -1,6 +1,6 @@
 # Phoenix 1.3 with Bulma 0.6.2 and Font Awesome 4.7
 
-This is an example of using Elixir Phoenix with Bulma.  The Bulma starter template is being used. The main changes to the default install is in /assets/package.json, /assets/brunch-config.js, and /assets/css/* (namely that app.css was renamed to app.scss and some custom css was imported).
+This is an example of using Elixir Phoenix with Bulma.  There's a basic Bulma starter template being used. The main changes to the default install is in /assets/package.json, /assets/brunch-config.js, and /assets/css/* (namely that app.css was renamed to app.scss and some custom css was imported).
 
 To start your Phoenix server:
 
