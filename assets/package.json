@@ -6,10 +6,11 @@
     "watch": "brunch watch --stdin"
   },
   "dependencies": {
-    "font-awesome": "^4.7.0",
     "bulma": "^0.6.2",
+    "font-awesome": "^4.7.0",
     "phoenix": "file:../deps/phoenix",
-    "phoenix_html": "file:../deps/phoenix_html"
+    "phoenix_html": "file:../deps/phoenix_html",
+    "vue": "^2.5.13"
   },
   "devDependencies": {
     "babel-brunch": "6.1.1",
