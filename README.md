@@ -44,7 +44,7 @@ plugins: {
   }
 },
 ```
-And the scss folder to the watch pass.
+And the scss folder to the watch path.
 ```
 paths: {
     // Dependencies and current project directories to watch
