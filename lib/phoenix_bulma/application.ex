@@ -8,8 +8,9 @@ defmodule PhoenixBulma.Application do
 
     # Define workers and child supervisors to be supervised
     children = [
-      # Start the Ecto repository
-      supervisor(PhoenixBulma.Repo, []),
+      # If using a database like PG, you'll need to add
+      # postgrex to mix.exs and then Start the Ecto repository
+      # supervisor(PhoenixBulma.Repo, []),
       # Start the endpoint when the application starts
       supervisor(PhoenixBulmaWeb.Endpoint, []),
       # Start your own worker by calling: PhoenixBulma.Worker.start_link(arg1, arg2, arg3)
