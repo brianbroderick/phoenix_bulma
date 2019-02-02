@@ -23,7 +23,7 @@
           <p class="title">Middle tile</p>
           <p class="subtitle">With an image</p>
           <figure class="image is-2by1">
-            <img src="images/its-working.gif" />
+            <img src="images/its_working.gif" />
           </figure>
         </article>
       </div>
